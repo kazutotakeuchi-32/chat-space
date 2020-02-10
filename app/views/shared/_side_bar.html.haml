@@ -3,13 +3,13 @@
   .side__header
     .side__header__box
       %p.side__header__box__text
-        masa
+        =current_user.nickname
       %ul.side__header__box__menu
         %li.side__header__box__user
           =link_to "#",class: "side__header__box-btn"do
             =icon('fas', ' fa-edit')
         %li.side__header__box__edit
-          =link_to "#",class: "side__header__box-btn"do
+          =link_to edit_user_path(current_user),class: "side__header__box-btn"do
             =icon('fas', ' fa-cog')
   .side__gruops
     .side__gruops__gruop
