@@ -1,0 +1,21 @@
+.side
+
+  .side__header
+    .side__header__box
+      %p.side__header__box__text
+        masa
+      %ul.side__header__box__menu
+        %li.side__header__box__user
+          =link_to "#",class: "side__header__box-btn"do
+            =icon('fas', ' fa-edit')
+        %li.side__header__box__edit
+          =link_to "#",class: "side__header__box-btn"do
+            =icon('fas', ' fa-cog')
+  .side__gruops
+    .side__gruops__gruop
+      .side__gruops__gruop-link
+      =link_to "techcamp" ,"#",class: "side__gruop "
+
+      %p.side__gruop__text
+        まだメッセージがありません
+        
