@@ -98,6 +98,7 @@ $color:white;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
+    overflow: scroll;
       &__left {
         margin-top: 35px;
       }
@@ -142,19 +143,26 @@ $color:white;
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
     &__message{
       padding-bottom: 40px;
+
         &__user{
           display: flex;
           margin-bottom: 10px;
+          
+
+
+            &__time{
+              font-size: 16px;
+              color: #999999;
+              margin-left: 5px;
+              padding-bottom: 5px;
+              font-size: 12px;
+            }
+            
 
             &-name{
-              font-size: 16px;
-              color: #333333;
-              font-weight: bold;
-            }
-
-            &-time{
               font-size: 12px ;
               color: #999999;
               margin-left: 10px;
@@ -181,7 +189,9 @@ $color:white;
       width: 100%;
 
      .input-box{
-       display: flex;
+       .new_message {
+         display: flex;
+       }
        width: 100%;
        position: relative;
 
@@ -199,9 +209,15 @@ $color:white;
          right: 10px;
          cursor: pointer;
          font-size: 1.3rem;
+         &__file {
+          position: absolute;
+          top: 8px;
+          font-size: 24px;
+          right: 125px;
+         }
 
-          &__file{
-           display: none;
+          &__file_image{
+            display: none;
           }
        }
      }
