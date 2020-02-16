@@ -59,7 +59,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
       $('.main__messages').append(html);
       $('#new_message')[0].reset();
@@ -68,6 +67,9 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+   })
+    .always(function() {
+    $('.submit-btn').prop('disabled', false);
   });
   });
 });
