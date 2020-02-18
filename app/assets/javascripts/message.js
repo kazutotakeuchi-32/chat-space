@@ -77,7 +77,6 @@ $(function(){
   });
    var reloadMessages = function() {
     last_message_id = $('.main__messages__message:last').data("message-id");
-    console.log(last_message_id)
     
     $.ajax({
       url: "api/messages",
@@ -98,10 +97,9 @@ $(function(){
     }
     })
     .fail(function() {
-      console.log('error');
+      alert("エラーが起きています！！");
     });
   };
-  // setInterval(reloadMessages, 7000);
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
